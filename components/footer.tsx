@@ -43,11 +43,11 @@ export function Footer() {
                 </span>
               </div>
               <a
-                href="tel:+19045551234"
+                href="tel:+19048013988"
                 className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
-                <span>(904) 555-1234</span>
+                <span>(904) 801-3988</span>
               </a>
               <a
                 href="mailto:info@protaxpayers.com"
@@ -94,6 +94,12 @@ export function Footer() {
               >
                 Tax Resources
               </Link>
+              <Link
+                href="/contact"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Contact
+              </Link>
               <a
                 href="https://www.irs.gov"
                 target="_blank"
@@ -118,8 +124,8 @@ export function Footer() {
         <div className="mt-12 border-t border-border pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Pro Tax Payers. All rights
-              reserved.
+              &copy; 2026 Pro Tax Payers. All Rights Reserved. Pro Tax Payers is
+              a subsidiary of Yazgi Corp.
             </p>
             <p className="text-xs text-muted-foreground">
               Serving Mandarin, Jacksonville FL 32223 and surrounding areas

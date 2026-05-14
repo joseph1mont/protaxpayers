@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 
 export function Header() {
@@ -40,9 +39,19 @@ export function Header() {
           >
             Resources
           </Link>
-          <Button asChild>
-            <Link href="/resources">View Tax Resources</Link>
-          </Button>
+          <Link
+            href="/contact"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Contact
+          </Link>
+          <a
+            href="tel:+19048013988"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            <Phone className="h-4 w-4" />
+            (904) 801-3988
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,11 +88,21 @@ export function Header() {
             >
               Resources
             </Link>
-            <Button asChild className="w-full">
-              <Link href="/resources" onClick={() => setMobileMenuOpen(false)}>
-                View Tax Resources
-              </Link>
-            </Button>
+            <Link
+              href="/contact"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <a
+              href="tel:+19048013988"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Phone className="h-4 w-4" />
+              (904) 801-3988
+            </a>
           </div>
         </div>
       )}
