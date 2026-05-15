@@ -14,7 +14,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.webp"
+            src="/protaxpayers-logo.webp"
             alt="Pro Tax Payers Logo"
             width={48}
             height={48}
@@ -35,10 +35,22 @@ export function Header() {
             Home
           </Link>
           <Link
+            href="/services"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Services
+          </Link>
+          <Link
             href="/resources"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Resources
+          </Link>
+          <Link
+            href="/about"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            About
           </Link>
           <Link
             href="/contact"
@@ -83,11 +95,25 @@ export function Header() {
               Home
             </Link>
             <Link
+              href="/services"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
               href="/resources"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               onClick={() => setMobileMenuOpen(false)}
             >
               Resources
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
             </Link>
             <Link
               href="/contact"

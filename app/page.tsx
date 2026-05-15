@@ -13,6 +13,11 @@ import {
   FileText,
   Calculator,
   Building2,
+  Clock,
+  ShieldCheck,
+  GraduationCap,
+  TrendingUp,
+  ClipboardCheck,
 } from "lucide-react";
 
 // JSON-LD Schema for Local Business
@@ -21,9 +26,9 @@ const jsonLd = {
   "@type": "AccountingService",
   name: "Pro Tax Payers",
   description:
-    "Professional tax preparation services in Mandarin, Jacksonville FL. Expert tax professionals serving individuals and businesses in the 32223 area.",
-  url: "https://protaxpayers.com",
-  telephone: "+1-904-555-1234",
+    "Professional tax preparation services in Jacksonville, FL. Expert tax professionals serving individuals and businesses in the 32207, 32223 (Mandarin), and San Marco areas.",  
+    url: "https://protaxpayers.com",
+  telephone: "+1-904-801-3988",
   email: "info@protaxpayers.com",
   address: {
     "@type": "PostalAddress",
@@ -35,8 +40,8 @@ const jsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 30.3113,
-    longitude: -81.5963,
+    latitude: 30.3065, // Accurate for Art Museum Dr area
+    longitude: -81.6375,
   },
   areaServed: [
     {
@@ -139,7 +144,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-6">
                 <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-accent/50 px-4 py-1.5 text-sm font-medium text-primary">
                   <MapPin className="h-4 w-4" />
-                  Serving Mandarin, Jacksonville FL 32223
+                  Serving Jacksonville, FL | 32207 & 32223
                 </div>
                 <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                   Professional Tax Preparation in Mandarin, Jacksonville
@@ -158,7 +163,7 @@ export default function HomePage() {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
-                    <a href="tel:+19045551234">Call (904) 555-1234</a>
+                    <a href="tel:+19048013988">Call (904) 801-3988</a>
                   </Button>
                 </div>
               </div>
@@ -166,7 +171,7 @@ export default function HomePage() {
                 <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/30" />
                 <div className="relative flex aspect-square items-center justify-center rounded-xl border border-border bg-card p-8 shadow-lg">
                   <Image
-                    src="/logo.webp"
+                    src="/protaxpayers-logo.webp"
                     alt="Pro Tax Payers - Professional Tax Preparation Services"
                     width={280}
                     height={280}
@@ -180,20 +185,40 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why Pro Tax Payers Section */}
-        <section className="border-t border-border bg-secondary/50 py-20 sm:py-28">
+{/* Why Pro Tax Payers Section */}
+<section className="border-t border-border bg-secondary/50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Why Pro Tax Payers?
+                Expertise You Can Trust
               </h2>
-              <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                Jacksonville residents trust us for professional, accurate, and
-                personalized tax preparation services in the Mandarin area.
+              <p className="mt-4 text-pretty text-lg text-muted-foreground italic">
+                We handle the complex, ever-evolving nuances of the tax code so you can focus on what you do best.
               </p>
             </div>
             <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {features.map((feature) => (
+              {[
+                {
+                  title: "Time is Money",
+                  description: "You're busy running a business. We free up your schedule so you can stay focused on growth and productivity.",
+                  icon: Clock,
+                },
+                {
+                  title: "Right the First Time",
+                  description: "Filing correctly saves you from headaches, missed deadlines, and costly mistakes. We ensure total accuracy.",
+                  icon: ShieldCheck,
+                },
+                {
+                  title: "Professional Expertise",
+                  description: "It's impossible to track every changing tax law. We maintain the expertise required to protect your finances.",
+                  icon: GraduationCap,
+                },
+                {
+                  title: "Year-Round Strategy",
+                  description: "We don't just file returns—we advise on long-term tax strategies and maximize your deductions.",
+                  icon: TrendingUp,
+                },
+              ].map((feature) => (
                 <Card
                   key={feature.title}
                   className="border-border bg-card transition-shadow hover:shadow-md"
@@ -205,7 +230,7 @@ export default function HomePage() {
                     <h3 className="text-lg font-semibold text-foreground">
                       {feature.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-sm leading-relaxed text-muted-foreground italic">
                       {feature.description}
                     </p>
                   </CardContent>
@@ -219,16 +244,31 @@ export default function HomePage() {
         <section className="border-t border-border py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Our Tax Services
+              <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl italic">
+                Our Tax & Business Services
               </h2>
               <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                Comprehensive tax preparation services for individuals and
-                businesses in Mandarin, Jacksonville FL and the 32223 area.
+                Comprehensive support for individuals and businesses in Mandarin, San Marco, and the greater Jacksonville area.
               </p>
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
-              {services.map((service) => (
+              {[
+                {
+                  title: "Tax Filing",
+                  description: "Personal & Corporate returns, State Sales Tax, and Tangible Business Tax compliance.",
+                  icon: FileText,
+                },
+                {
+                  title: "Entity & Licensing",
+                  description: "New business formation, Beverage & Tobacco licenses, EBT authorizations, and Food permits.",
+                  icon: Building2,
+                },
+                {
+                  title: "Business Support",
+                  description: "Annual reports, Virtual Office addresses, Notary services, and ongoing compliance monitoring.",
+                  icon: ClipboardCheck,
+                },
+              ].map((service) => (
                 <div
                   key={service.title}
                   className="flex flex-col items-center gap-4 rounded-xl border border-border bg-card p-8 text-center transition-shadow hover:shadow-md"
@@ -236,14 +276,22 @@ export default function HomePage() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="text-xl font-semibold text-foreground italic">
                     {service.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-muted-foreground italic">
                     {service.description}
                   </p>
                 </div>
               ))}
+            </div>
+            <div className="mt-12 text-center">
+              <a 
+                href="/services" 
+                className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+              >
+                View all professional services →
+              </a>
             </div>
           </div>
         </section>

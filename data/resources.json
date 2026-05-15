@@ -1,0 +1,129 @@
+// Resource data structure ready for Sanity.io CMS integration
+// Replace this with: const resources = await sanityClient.fetch(RESOURCES_QUERY)
+const resources = [
+    {
+      id: "1",
+      title: "IRS Form 1040",
+      description: "U.S. Individual Income Tax Return - The main form for filing your federal individual income tax return.",
+      category: "IRS Forms",
+      url: "https://www.irs.gov/forms-pubs/about-form-1040",
+      icon: "FileText",
+    },
+    {
+      id: "2",
+      title: "IRS Form W-2",
+      description: "Wage and Tax Statement - Report wages paid to employees and the taxes withheld.",
+      category: "IRS Forms",
+      url: "https://www.irs.gov/forms-pubs/about-form-w-2",
+      icon: "FileCheck",
+    },
+    {
+      id: "3",
+      title: "IRS Form 1099",
+      description: "Information returns for reporting various types of income other than wages, salaries, and tips.",
+      category: "IRS Forms",
+      url: "https://www.irs.gov/forms-pubs/about-form-1099-misc",
+      icon: "FileText",
+    },
+    {
+      id: "4",
+      title: "IRS Form W-4",
+      description: "Employee Withholding Certificate - Determine the correct federal income tax withholding.",
+      category: "IRS Forms",
+      url: "https://www.irs.gov/forms-pubs/about-form-w-4",
+      icon: "Users",
+    },
+    {
+      id: "5",
+      title: "Schedule C",
+      description: "Profit or Loss From Business - Report income or loss from a business operated as a sole proprietor.",
+      category: "Business",
+      url: "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040",
+      icon: "Briefcase",
+    },
+    {
+      id: "6",
+      title: "IRS Free File",
+      description: "Free online tax preparation and filing options for eligible taxpayers.",
+      category: "Tools",
+      url: "https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free",
+      icon: "Calculator",
+    },
+    {
+      id: "7",
+      title: "Florida Department of Revenue",
+      description: "Official Florida state tax agency for sales tax, corporate tax, and other state taxes.",
+      category: "State Resources",
+      url: "https://floridarevenue.com/",
+      icon: "Landmark",
+    },
+    {
+      id: "8",
+      title: "IRS Refund Status",
+      description: "Check the status of your federal tax refund with the Where's My Refund tool.",
+      category: "Tools",
+      url: "https://www.irs.gov/refunds",
+      icon: "DollarSign",
+    },
+    {
+      id: "9",
+      title: "Tax Withholding Estimator",
+      description: "IRS tool to estimate your federal income tax withholding for accurate paycheck deductions.",
+      category: "Tools",
+      url: "https://www.irs.gov/individuals/tax-withholding-estimator",
+      icon: "Calculator",
+    },
+    {
+      id: "10",
+      title: "Small Business Tax Center",
+      description: "IRS resources specifically for small business owners, self-employed, and entrepreneurs.",
+      category: "Business",
+      url: "https://www.irs.gov/businesses/small-businesses-self-employed",
+      icon: "Building",
+    },
+    {
+      id: "11",
+      title: "Publication 17",
+      description: "Your Federal Income Tax - Comprehensive guide covering individual tax rules and regulations.",
+      category: "Guides",
+      url: "https://www.irs.gov/publications/p17",
+      icon: "BookOpen",
+    },
+    {
+      id: "12",
+      title: "IRS Tax Calendar",
+      description: "Important tax due dates and deadlines for individuals and businesses.",
+      category: "Tools",
+      url: "https://www.irs.gov/pub/irs-pdf/p509.pdf",
+      icon: "Globe",
+    },
+  ];
+  
+  const categories = [
+    "All",
+    "IRS Forms",
+    "State Resources",
+    "Business",
+    "Tools",
+    "Guides",
+  ];
+  
+  const quickLinks = [
+    { title: "IRS.gov", url: "https://www.irs.gov", description: "Official IRS Website" },
+    { title: "Florida DOR", url: "https://floridarevenue.com", description: "Florida Department of Revenue" },
+    { title: "Check Refund", url: "https://www.irs.gov/refunds", description: "Where's My Refund?" },
+    { title: "Free File", url: "https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free", description: "IRS Free File Program" },
+  ];
+  
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    FileText,
+    FileCheck,
+    Users,
+    Briefcase,
+    Calculator,
+    Landmark,
+    DollarSign,
+    Building,
+    BookOpen,
+    Globe,
+  };

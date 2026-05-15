@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -174,21 +175,7 @@ export default function ResourcesPage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="border-b border-border bg-secondary/50 py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                Tax Resources
-              </h1>
-              <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                Access essential IRS forms, state resources, and helpful tools
-                for your tax preparation needs in Mandarin, Jacksonville FL.
-              </p>
-            </div>
-          </div>
-        </section>
-
+      <PageHero title="Tax Resources" />
         {/* Main Content */}
         <section className="py-12 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -347,7 +334,7 @@ export default function ResourcesPage() {
                       assist you with all your tax preparation needs.
                     </p>
                     <Button asChild className="w-full">
-                      <a href="tel:+19045551234">Call (904) 555-1234</a>
+                      <a href="tel:+19048013988">Call (904) 801-3988</a>
                     </Button>
                   </CardContent>
                 </Card>

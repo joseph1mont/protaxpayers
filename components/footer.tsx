@@ -89,16 +89,34 @@ export function Footer() {
                 Home
               </Link>
               <Link
+                href="/services"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Our Services
+              </Link>
+              <Link
                 href="/resources"
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 Tax Resources
               </Link>
               <Link
+                href="/about"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                About Us
+              </Link>
+              <Link
                 href="/contact"
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 Contact
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Privacy Policy
               </Link>
               <a
                 href="https://www.irs.gov"
