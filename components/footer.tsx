@@ -146,7 +146,7 @@ export function Footer() {
               a subsidiary of Yazgi Corp.
             </p>
             <p className="text-xs text-muted-foreground">
-              Serving Mandarin, Jacksonville FL 32223 and surrounding areas
+              Website designed by <Link href="https://freelancewebdesignusa.com" target="_blank">Joseph Thomas - Freelance Web Design USA</Link>
             </p>
           </div>
         </div>

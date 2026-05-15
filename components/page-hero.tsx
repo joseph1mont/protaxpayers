@@ -6,7 +6,7 @@ import Image from "next/image";
         <section className="relative">
           <div className="relative h-64 w-full sm:h-80 md:h-96">
             <Image
-              src="/jacksonville-hero.jpg"
+              src="/jacksonville-hero.webp"
               alt="Jacksonville Florida Skyline - Pro Tax Payers Headquarters"
               fill
               unoptimized
