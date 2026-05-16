@@ -146,7 +146,7 @@ export function Footer() {
               a subsidiary of Yazgi Corp.
             </p>
             <p className="text-xs text-muted-foreground">
-              Website designed by <Link href="https://freelancewebdesignusa.com" target="_blank">Joseph Thomas - Freelance Web Design USA</Link>
+              Website Powered by <Link href="https://freelancewebdesignusa.com" target="_blank">Joseph Thomas - Freelance Web Design USA</Link>
             </p>
           </div>
         </div>
