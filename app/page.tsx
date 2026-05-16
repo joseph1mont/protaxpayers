@@ -18,6 +18,7 @@ import {
   GraduationCap,
   TrendingUp,
   ClipboardCheck,
+  Globe,
 } from "lucide-react";
 
 // JSON-LD Schema for Local Business
@@ -26,10 +27,10 @@ const jsonLd = {
   "@type": "AccountingService",
   name: "Pro Tax Payers",
   description:
-    "Professional tax preparation services in Jacksonville, FL. Expert tax professionals serving individuals and businesses in the 32207, 32223 (Mandarin), and San Marco areas.",  
+    "Professional tax preparation and multi-state filing services in Jacksonville, FL. Serving individuals and businesses in the 32207, San Marco, and Southside areas.",  
     url: "https://protaxpayers.com",
   telephone: "+1-904-801-3988",
-  email: "info@protaxpayers.com",
+  email: "PTPJax@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "1650 Art Museum Dr. Unit 17",
@@ -40,26 +41,22 @@ const jsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 30.3065, // Accurate for Art Museum Dr area
+    latitude: 30.3065,
     longitude: -81.6375,
   },
   areaServed: [
     {
       "@type": "City",
       name: "Jacksonville",
-      containedIn: {
-        "@type": "State",
-        name: "Florida",
-      },
     },
     {
-      "@type": "PostalCode",
-      postalCode: "32223",
+      "@type": "State",
+      name: "Florida",
     },
     {
-      "@type": "PostalCode",
-      postalCode: "32207",
-    },
+      "@type": "Country",
+      name: "United States",
+    }
   ],
   openingHoursSpecification: [
     {
@@ -76,7 +73,7 @@ const jsonLd = {
     },
   ],
   priceRange: "$$",
-  serviceType: ["Tax Preparation", "Business Tax Services", "Individual Tax Services"],
+  serviceType: ["Tax Preparation", "Multi-State Tax Returns", "Business Tax Services"],
 };
 
 const features = [
@@ -84,46 +81,46 @@ const features = [
     icon: Shield,
     title: "Trusted Expertise",
     description:
-      "Our experienced tax professionals stay current with the latest tax laws and regulations to maximize your returns.",
+      "Our professionals stay current with evolving tax codes to maximize your legal deductions and credits.",
   },
   {
-    icon: Users,
-    title: "Personalized Service",
+    icon: Globe,
+    title: "Multi-State Filing",
     description:
-      "We take the time to understand your unique financial situation and provide tailored tax solutions.",
+      "Whether you lived in another state or have out-of-state business interests, we handle complex multi-jurisdiction returns.",
   },
   {
     icon: MapPin,
-    title: "Local Knowledge",
+    title: "Jacksonville Local",
     description:
-      "As Mandarin locals, we understand the Jacksonville community and the specific needs of Florida residents.",
+      "Conveniently located on Art Museum Dr, we proudly serve the San Marco and Southside communities.",
   },
   {
     icon: CheckCircle,
     title: "Accuracy Guaranteed",
     description:
-      "We stand behind our work with thorough review processes to ensure your tax return is accurate and complete.",
+      "We stand behind our work with thorough review processes to ensure every return is filed correctly the first time.",
   },
 ];
 
 const services = [
   {
     icon: FileText,
-    title: "Individual Tax Preparation",
+    title: "Individual & Multi-State",
     description:
-      "Comprehensive tax preparation for individuals and families in Mandarin and Jacksonville.",
+      "Specialized tax preparation for Florida residents and those with out-of-state filing requirements.",
   },
   {
     icon: Building2,
-    title: "Business Tax Services",
+    title: "Business Tax & Compliance",
     description:
-      "Expert tax preparation for small businesses, LLCs, and partnerships in the 32223 area.",
+      "Expert filing for small businesses, LLCs, and corporations throughout Jacksonville and beyond.",
   },
   {
     icon: Calculator,
-    title: "Tax Planning",
+    title: "Strategic Tax Planning",
     description:
-      "Strategic tax planning to help you minimize your tax burden and maximize your financial goals.",
+      "Proactive advice to minimize your future tax liability and streamline your business growth.",
   },
 ];
 
@@ -144,16 +141,13 @@ export default function HomePage() {
               <div className="flex flex-col gap-6">
                 <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-accent/50 px-4 py-1.5 text-sm font-medium text-primary">
                   <MapPin className="h-4 w-4" />
-                  Serving Jacksonville, FL | 32207 & 32223
+                  Serving Jacksonville & Beyond | San Marco & Southside
                 </div>
                 <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                  Professional Tax Preparation in Mandarin, Jacksonville
+                  Expert Tax Preparation & Multi-State Filing
                 </h1>
                 <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-                  Trust your taxes to experienced professionals who understand
-                  your needs. Pro Tax Payers delivers accurate, reliable tax
-                  preparation services for individuals and businesses throughout
-                  Jacksonville.
+                  Streamline your taxes with professionals who understand the Jacksonville market. From local business returns to complex out-of-state filings, we get it right the first time.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Button size="lg" asChild className="gap-2">
@@ -172,7 +166,7 @@ export default function HomePage() {
                 <div className="relative flex aspect-square items-center justify-center rounded-xl border border-border bg-card p-8 shadow-lg">
                   <Image
                     src="/protaxpayers-logo.webp"
-                    alt="Pro Tax Payers - Professional Tax Preparation Services"
+                    alt="Pro Tax Payers - Jacksonville Tax Services"
                     width={280}
                     height={280}
                     unoptimized
@@ -190,32 +184,32 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Expertise You Can Trust
+                Experience You Can Count On
               </h2>
-              <p className="mt-4 text-pretty text-lg text-muted-foreground italic">
-                We handle the complex, ever-evolving nuances of the tax code so you can focus on what you do best.
+              <p className="mt-4 text-pretty text-lg text-muted-foreground">
+                We manage the technical complexities of tax filings across state lines so you can focus on your business and family.
               </p>
             </div>
             <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  title: "Time is Money",
-                  description: "You're busy running a business. We free up your schedule so you can stay focused on growth and productivity.",
+                  title: "Time Optimization",
+                  description: "Whether you're an individual or a business owner, we save you the hours spent navigating tax forms and regulations.",
                   icon: Clock,
                 },
                 {
-                  title: "Right the First Time",
-                  description: "Filing correctly saves you from headaches, missed deadlines, and costly mistakes. We ensure total accuracy.",
+                  title: "Precision Filing",
+                  description: "Accuracy is our priority. Filing correctly ensures you avoid penalties and maximize your potential returns.",
                   icon: ShieldCheck,
                 },
                 {
-                  title: "Professional Expertise",
-                  description: "It's impossible to track every changing tax law. We maintain the expertise required to protect your finances.",
+                  title: "Local Experience",
+                  description: "Deeply rooted in the 32207 area, we understand the specific tax environment for Jacksonville residents.",
                   icon: GraduationCap,
                 },
                 {
-                  title: "Year-Round Strategy",
-                  description: "We don't just file returns—we advise on long-term tax strategies and maximize your deductions.",
+                  title: "Growth Strategy",
+                  description: "We provide insights that help your business stay compliant while optimizing your year-over-year tax strategy.",
                   icon: TrendingUp,
                 },
               ].map((feature) => (
@@ -244,28 +238,28 @@ export default function HomePage() {
         <section className="border-t border-border py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl italic">
-                Our Tax & Business Services
+              <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Tax & Business Solutions
               </h2>
               <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                Comprehensive support for individuals and businesses in Mandarin, San Marco, and the greater Jacksonville area.
+                Comprehensive tax support for individuals and entities in San Marco, Southside, and throughout the US.
               </p>
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               {[
                 {
-                  title: "Tax Filing",
-                  description: "Personal & Corporate returns, State Sales Tax, and Tangible Business Tax compliance.",
-                  icon: FileText,
+                  title: "Tax & Multi-State",
+                  description: "Individual, Corporate, and State filings. We specialize in handling returns for residents with interests in multiple states.",
+                  icon: Globe,
                 },
                 {
-                  title: "Entity & Licensing",
-                  description: "New business formation, Beverage & Tobacco licenses, EBT authorizations, and Food permits.",
+                  title: "Entity Formation",
+                  description: "New business setup, business licenses, permits, and EBT authorizations to get your venture started right.",
                   icon: Building2,
                 },
                 {
-                  title: "Business Support",
-                  description: "Annual reports, Virtual Office addresses, Notary services, and ongoing compliance monitoring.",
+                  title: "Business Compliance",
+                  description: "Annual reports, Tangible Tax, Virtual Office solutions, and Notary services to keep your business running smoothly.",
                   icon: ClipboardCheck,
                 },
               ].map((service) => (
@@ -276,7 +270,7 @@ export default function HomePage() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground italic">
+                  <h3 className="text-xl font-semibold text-foreground">
                     {service.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground italic">
@@ -284,14 +278,6 @@ export default function HomePage() {
                   </p>
                 </div>
               ))}
-            </div>
-            <div className="mt-12 text-center">
-              <a 
-                href="/services" 
-                className="inline-flex items-center text-sm font-medium text-primary hover:underline"
-              >
-                View all professional services →
-              </a>
             </div>
           </div>
         </section>
@@ -301,11 +287,10 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center gap-6 text-center">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-                Ready to Get Started?
+                Ready to Simplify Your Taxes?
               </h2>
               <p className="max-w-2xl text-pretty text-lg text-primary-foreground/90">
-                Access our comprehensive collection of tax resources, IRS forms,
-                and helpful links to prepare for your tax appointment.
+                Access our tax resources and IRS forms or call our Jacksonville office today to schedule your consultation.
               </p>
               <Button
                 size="lg"

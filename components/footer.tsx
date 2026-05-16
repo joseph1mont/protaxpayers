@@ -23,8 +23,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Professional tax preparation services serving Mandarin,
-              Jacksonville FL and the surrounding 32223 area.
+              Professional individual, corporate, and multi-state tax preparation services serving San Marco, Southside, and the greater Jacksonville area.
             </p>
           </div>
 
@@ -146,7 +145,7 @@ export function Footer() {
               a subsidiary of Yazgi Corp.
             </p>
             <p className="text-xs text-muted-foreground">
-              Website Powered by <Link href="https://freelancewebdesignusa.com" target="_blank">Joseph Thomas - Freelance Web Design USA</Link>
+              Website Powered by <Link href="https://freelancewebdesignusa.com" target="_blank" className="hover:underline">Joseph Thomas - Freelance Web Design USA</Link>
             </p>
           </div>
         </div>

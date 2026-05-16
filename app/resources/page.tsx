@@ -23,8 +23,6 @@ import {
   BookOpen,
 } from "lucide-react";
 
-// Resource data structure ready for Sanity.io CMS integration
-// Replace this with: const resources = await sanityClient.fetch(RESOURCES_QUERY)
 const resources = [
   {
     id: "1",
@@ -298,7 +296,7 @@ export default function ResourcesPage() {
                 {/* Quick Resources */}
                 <Card className="border-border">
                   <CardHeader>
-                    <CardTitle className="text-lg">Quick Resources</CardTitle>
+                    <CardTitle className="text-lg">Quick Links</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-3">
                     {quickLinks.map((link) => (
@@ -326,12 +324,11 @@ export default function ResourcesPage() {
                 {/* Contact Card */}
                 <Card className="border-primary/20 bg-accent/30">
                   <CardHeader>
-                    <CardTitle className="text-lg">Need Help?</CardTitle>
+                    <CardTitle className="text-lg">Need Assistance?</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-4">
                     <p className="text-sm text-muted-foreground">
-                      Our Mandarin, Jacksonville tax professionals are here to
-                      assist you with all your tax preparation needs.
+                      Our Jacksonville tax preparation experts are standing by to assist with individual, corporate, and multi-state compliance.
                     </p>
                     <Button asChild className="w-full">
                       <a href="tel:+19048013988">Call (904) 801-3988</a>
@@ -342,7 +339,7 @@ export default function ResourcesPage() {
                 {/* Location Info */}
                 <Card className="border-border">
                   <CardHeader>
-                    <CardTitle className="text-lg">Visit Us</CardTitle>
+                    <CardTitle className="text-lg">Visit Our Office</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <address className="not-italic">
@@ -355,7 +352,7 @@ export default function ResourcesPage() {
                         Jacksonville, FL 32207
                       </p>
                       <p className="mt-2 text-sm text-muted-foreground">
-                        Serving Mandarin, Jacksonville FL 32223
+                        Serving San Marco, Southside, and out-of-state filers.
                       </p>
                     </address>
                   </CardContent>

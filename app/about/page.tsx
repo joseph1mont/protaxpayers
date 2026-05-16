@@ -2,7 +2,7 @@ import { PageHero } from "@/components/page-hero";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { ShieldCheck, Target, Users, Landmark, Clock, Award, MapPin, Search } from "lucide-react";
+import { ShieldCheck, Target, Users, Landmark, Clock, Award, MapPin, Search, Globe } from "lucide-react";
 
 const values = [
   {
@@ -11,14 +11,14 @@ const values = [
     description: "Every return undergoes a multi-point verification process to ensure 100% compliance with current IRS regulations.",
   },
   {
+    icon: Globe,
+    title: "Multi-State Expertise",
+    description: "We handle out-of-state returns and multi-jurisdiction filings smoothly, ensuring accuracy across different state tax regulations.",
+  },
+  {
     icon: Target,
     title: "Maximized Refunds",
     description: "We don't just enter numbers; we look for every legal credit and deduction available to your specific situation.",
-  },
-  {
-    icon: Users,
-    title: "Client Partnership",
-    description: "We view our clients as partners. Your financial success is the metric by which we measure our own.",
   },
   {
     icon: Landmark,
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
       <main className="flex-1">
 
-        <PageHero title="Expert Tax Preparation in Jacksonville" />
+        <PageHero title="Expert Tax Preparation & Multi-State Filing" />
         
         {/* Main Content Section */}
         <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
@@ -43,31 +43,31 @@ export default function AboutPage() {
             {/* Left Column: The Narrative */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-foreground">A Trusted Partner for Jacksonville’s Tax Needs</h2>
+                <h2 className="text-3xl font-bold text-foreground">A Trusted Partner for Jacksonville and Multi-State Tax Needs</h2>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                  Navigating the ever-changing landscape of federal and state tax laws requires more than just software—it requires experience and a commitment to detail. At **Pro Tax Payers**, we have built our reputation on providing high-quality, reliable tax preparation services that cater specifically to the residents and small business owners of Jacksonville, Florida.
+                  Navigating the ever-changing landscape of federal and state tax laws requires more than just software—it requires experience and a commitment to detail. At **Pro Tax Payers**, we have built our reputation on providing high-quality, reliable tax preparation services that cater specifically to individuals, families, and small business owners who require expert oversight on both Florida and out-of-state returns.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                  Located conveniently on Art Museum Drive, we serve a diverse clientele from **San Marco, Mandarin, and the Southside area**. Our mission is simple: to provide peace of mind through professional financial guidance. Whether you are filing a straightforward individual return or managing complex business tax requirements, our team is equipped to handle your finances with the care and precision they deserve.
+                  Located conveniently on Art Museum Drive, we serve a diverse local clientele from **San Marco and the Southside area**, while simultaneously managing filings for clients with diverse income streams across multiple US states. Our mission is simple: to provide peace of mind through professional financial guidance. Whether you are filing a straightforward local return or managing complex cross-state business tax requirements, our team is equipped to handle your finances with precision.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-2xl font-semibold text-foreground flex items-center gap-2">
-                  <Award className="text-primary h-6 w-6" /> Why Local Expertise Matters
+                  <Award className="text-primary h-6 w-6" /> Local Insight with a National Reach
                 </h3>
                 <p className="mt-3 text-muted-foreground">
-                  Tax laws aren&apos;t just national; they are local. Being based in Jacksonville means we understand the specific needs of Florida taxpayers. From understanding state-specific filing requirements to helping local entrepreneurs maximize their business deductions, our &quot;boots on the ground&quot; approach gives our clients a distinct advantage. 
+                  Tax laws aren&apos;t just national; they vary greatly across state borders. Being based in Jacksonville means we understand the specific needs of Florida taxpayers, but our capabilities extend far beyond state lines. We routinely assist clients who have moved across states, own rental properties across different regions, or operate businesses that cross state jurisdictions.
                 </p>
                 <p className="mt-3 text-muted-foreground">
-                  We take inspiration from long-standing local institutions that have served this community for decades. Like the most trusted names in Jacksonville accounting, Pro Tax Payers focuses on building multi-generational relationships. We aren't just here for one tax season; we are here for your entire financial journey.
+                  We focus on building multi-generational relationships, taking inspiration from long-standing local institutions that have served this community for decades. We aren&apos;t just here for one tax season; we are here for your entire financial journey, tracking state and federal regulatory changes year-round to protect your hard-earned income.
                 </p>
               </div>
 
               <div className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
                 <h3 className="text-2xl font-semibold text-foreground">The Yazgi Corp Advantage</h3>
                 <p className="mt-3 text-muted-foreground italic">
-                  Pro Tax Payers is proud to be a member of the **Yazgi Corp** family. This connection allows us to combine the personalized, &quot;mom-and-pop&quot; feel of a local office with the robust resources and professional standards of a major corporate entity. This means our clients get the best of both worlds: individual attention and world-class security and accuracy.
+                  Pro Tax Payers is proud to be a member of the **Yazgi Corp** family. This connection allows us to combine the personalized, responsive feel of a local boutique office with the robust analytical resources and professional standards of a major corporate entity. This gives our clients the absolute best of both worlds: individual attention paired with top-tier file safety, security, and institutional accuracy.
                 </p>
               </div>
             </div>
@@ -80,22 +80,26 @@ export default function AboutPage() {
                   <ul className="space-y-4">
                     <li className="flex gap-3">
                       <MapPin className="text-primary h-5 w-5 shrink-0" />
-                      <span className="text-sm italic">Located in the heart of Jacksonville (32207)</span>
+                      <span className="text-sm italic">Located in Jacksonville (32207) serving San Marco & Southside</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Globe className="text-primary h-5 w-5 shrink-0" />
+                      <span className="text-sm italic">Full Multi-State and out-of-state tax return filing capabilities</span>
                     </li>
                     <li className="flex gap-3">
                       <Clock className="text-primary h-5 w-5 shrink-0" />
-                      <span className="text-sm italic">Year-round support, not just during tax season</span>
+                      <span className="text-sm italic">Year-round tracking of changing state tax guidelines</span>
                     </li>
                     <li className="flex gap-3">
                       <Search className="text-primary h-5 w-5 shrink-0" />
-                      <span className="text-sm italic">Specialists in Individual & Small Business Tax</span>
+                      <span className="text-sm italic">Specialists in Individual & Small Business Tax compliance</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
               <div className="p-6 border-l-4 border-primary bg-background shadow-sm">
-                <p className="text-sm font-medium">&quot;Our mission is to provide high-quality, reliable accounting and tax services at competitive prices, ensuring our clients’ financial success and peace of mind."</p>
+                <p className="text-sm font-medium">&quot;Our mission is to provide high-quality, reliable tax services at competitive prices, ensuring our clients’ cross-jurisdictional financial success and peace of mind."</p>
               </div>
             </div>
           </div>
@@ -130,7 +134,7 @@ export default function AboutPage() {
           <div className="rounded-3xl bg-primary px-8 py-12 text-white shadow-2xl">
             <h2 className="text-3xl font-bold sm:text-4xl italic">Let’s Work Together</h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90">
-              Ready to experience a higher standard of tax preparation? Start by calling **(904) 801-3988** or visit our contact page to schedule your consultation. We look forward to solving your problems and helping you achieve your financial goals.
+              Ready to experience a higher standard of local and cross-state tax preparation? Start by calling **(904) 801-3988** or visit our contact page to schedule your consultation. We look forward to solving your tax problems.
             </p>
             <div className="mt-10">
               <a 

@@ -13,24 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pro Tax Payers | Tax Preparation Jacksonville FL 32207 & 32223",
+  title: "Pro Tax Payers | Professional Tax Preparation Jacksonville FL 32207",
   description:
-    "Professional tax preparation services at 1650 Art Museum Dr, Jacksonville FL 32207. Trusted local tax experts serving Mandarin, San Marco, and the Southside with individual and business tax solutions.",
+    "Expert tax preparation services at 1650 Art Museum Dr, Jacksonville. Specializing in individual, multi-state, and business tax returns for San Marco, Southside, and the greater Jacksonville area.",
   keywords: [
     "tax preparation Jacksonville FL",
+    "multi-state tax filing services",
     "tax professionals 32207",
-    "tax preparation Mandarin FL",
-    "tax services 32223",
-    "San Marco tax prep",
-    "business tax services Jacksonville",
-    "individual tax preparation Florida",
+    "San Marco tax preparation",
+    "Southside Jacksonville tax services",
+    "business tax filing Florida",
+    "out of state tax returns",
     "Pro Tax Payers Art Museum Dr",
   ],
   authors: [{ name: "Pro Tax Payers" }],
   openGraph: {
-    title: "Pro Tax Payers | Professional Tax Prep in Jacksonville FL",
+    title: "Pro Tax Payers | Expert Tax Prep & Multi-State Filing Jacksonville",
     description:
-      "Expert tax preparation services for individuals and businesses in Jacksonville. Visit our office on Art Museum Dr or schedule a consultation today.",
+      "Reliable tax preparation for individuals and businesses. We handle Florida and multi-state returns from our San Marco area office.",
     type: "website",
     locale: "en_US",
     url: "https://protaxpayers.com",
