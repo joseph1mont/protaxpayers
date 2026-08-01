@@ -1,8 +1,9 @@
+// file path: next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // 1. Enables the static export (creates the 'out' folder)
-  output: 'export',
+  output: "export",
 
   // 2. Required for Static Hosting (Hostinger/Vercel Static)
   // This ensures images work without a Next.js server

@@ -1,3 +1,4 @@
+// file path: app/page.tsx
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Shield,
-  Users,
   MapPin,
   CheckCircle,
   ArrowRight,
@@ -27,8 +27,8 @@ const jsonLd = {
   "@type": "AccountingService",
   name: "Pro Tax Payers",
   description:
-    "Professional tax preparation and multi-state filing services in Jacksonville, FL. Serving individuals and businesses in the 32207, San Marco, and Southside areas.",  
-    url: "https://protaxpayers.com",
+    "Professional tax preparation and multi-state filing services in Jacksonville, FL. Serving individuals and businesses in the 32207, San Marco, and Southside areas.",
+  url: "https://protaxpayers.com",
   telephone: "+1-904-801-3988",
   email: "PTPJax@gmail.com",
   address: {
@@ -56,7 +56,7 @@ const jsonLd = {
     {
       "@type": "Country",
       name: "United States",
-    }
+    },
   ],
   openingHoursSpecification: [
     {
@@ -73,7 +73,11 @@ const jsonLd = {
     },
   ],
   priceRange: "$$",
-  serviceType: ["Tax Preparation", "Multi-State Tax Returns", "Business Tax Services"],
+  serviceType: [
+    "Tax Preparation",
+    "Multi-State Tax Returns",
+    "Business Tax Services",
+  ],
 };
 
 const features = [
@@ -135,7 +139,7 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-background">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/30 via-background to-background" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-accent/30 via-background to-background" />
           <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
               <div className="flex flex-col gap-6">
@@ -147,7 +151,9 @@ export default function HomePage() {
                   Expert Tax Preparation & Multi-State Filing
                 </h1>
                 <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-                  Streamline your taxes with professionals who understand the Jacksonville market. From local business returns to complex out-of-state filings, we get it right the first time.
+                  Streamline your taxes with professionals who understand the
+                  Jacksonville market. From local business returns to complex
+                  out-of-state filings, we get it right the first time.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Button size="lg" asChild className="gap-2">
@@ -165,7 +171,7 @@ export default function HomePage() {
                 <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/30" />
                 <div className="relative flex aspect-square items-center justify-center rounded-xl border border-border bg-card p-8 shadow-lg">
                   <Image
-                    src="/protaxpayers-logo.webp"
+                    src="/protaxpayers-signature.webp"
                     alt="Pro Tax Payers - Jacksonville Tax Services"
                     width={280}
                     height={280}
@@ -179,37 +185,42 @@ export default function HomePage() {
           </div>
         </section>
 
-{/* Why Pro Tax Payers Section */}
-<section className="border-t border-border bg-secondary/50 py-20 sm:py-28">
+        {/* Why Pro Tax Payers Section */}
+        <section className="border-t border-border bg-secondary/50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Experience You Can Count On
               </h2>
               <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                We manage the technical complexities of tax filings across state lines so you can focus on your business and family.
+                We manage the technical complexities of tax filings across state
+                lines so you can focus on your business and family.
               </p>
             </div>
             <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   title: "Time Optimization",
-                  description: "Whether you're an individual or a business owner, we save you the hours spent navigating tax forms and regulations.",
+                  description:
+                    "Whether you're an individual or a business owner, we save you the hours spent navigating tax forms and regulations.",
                   icon: Clock,
                 },
                 {
                   title: "Precision Filing",
-                  description: "Accuracy is our priority. Filing correctly ensures you avoid penalties and maximize your potential returns.",
+                  description:
+                    "Accuracy is our priority. Filing correctly ensures you avoid penalties and maximize your potential returns.",
                   icon: ShieldCheck,
                 },
                 {
                   title: "Local Experience",
-                  description: "Deeply rooted in the 32207 area, we understand the specific tax environment for Jacksonville residents.",
+                  description:
+                    "Deeply rooted in the 32207 area, we understand the specific tax environment for Jacksonville residents.",
                   icon: GraduationCap,
                 },
                 {
                   title: "Growth Strategy",
-                  description: "We provide insights that help your business stay compliant while optimizing your year-over-year tax strategy.",
+                  description:
+                    "We provide insights that help your business stay compliant while optimizing your year-over-year tax strategy.",
                   icon: TrendingUp,
                 },
               ].map((feature) => (
@@ -242,24 +253,28 @@ export default function HomePage() {
                 Tax & Business Solutions
               </h2>
               <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                Comprehensive tax support for individuals and entities in San Marco, Southside, and throughout the US.
+                Comprehensive tax support for individuals and entities in San
+                Marco, Southside, and throughout the US.
               </p>
             </div>
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               {[
                 {
                   title: "Tax & Multi-State",
-                  description: "Individual, Corporate, and State filings. We specialize in handling returns for residents with interests in multiple states.",
+                  description:
+                    "Individual, Corporate, and State filings. We specialize in handling returns for residents with interests in multiple states.",
                   icon: Globe,
                 },
                 {
                   title: "Entity Formation",
-                  description: "New business setup, business licenses, permits, and EBT authorizations to get your venture started right.",
+                  description:
+                    "New business setup, business licenses, permits, and EBT authorizations to get your venture started right.",
                   icon: Building2,
                 },
                 {
                   title: "Business Compliance",
-                  description: "Annual reports, Tangible Tax, Virtual Office solutions, and Notary services to keep your business running smoothly.",
+                  description:
+                    "Annual reports, Tangible Tax, Virtual Office solutions, and Notary services to keep your business running smoothly.",
                   icon: ClipboardCheck,
                 },
               ].map((service) => (
@@ -290,7 +305,8 @@ export default function HomePage() {
                 Ready to Simplify Your Taxes?
               </h2>
               <p className="max-w-2xl text-pretty text-lg text-primary-foreground/90">
-                Access our tax resources and IRS forms or call our Jacksonville office today to schedule your consultation.
+                Access our tax resources and IRS forms or call our Jacksonville
+                office today to schedule your consultation.
               </p>
               <Button
                 size="lg"

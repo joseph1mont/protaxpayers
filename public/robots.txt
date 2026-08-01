@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /lips/
+Disallow: /forwarder/
+
+Sitemap: https://protaxpayers.com
