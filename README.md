@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pro Tax Payers — Next.js Enterprise Web Platform
 
-## Getting Started
+A high-performance, responsive web application engineered for **Pro Tax Payers** (protaxpayers.com). Built with Next.js (App Router), TypeScript, Tailwind CSS, and Shadcn UI, this application is optimized for sub-second page loads, accessibility, advanced Schema markup, and Answer Engine Optimization (AEO).
 
-First, run the development server:
+---
+
+## ⚡ Key Highlights & Architecture
+
+- **Framework:** Next.js (App Router) with static HTML generation (`output: "export"`).
+- **Type Safety:** 100% TypeScript (`tsconfig.json`) across components, props, and data models.
+- **UI & Styling:** Tailwind CSS, PostCSS, and modular UI components built with Shadcn UI.
+- **Performance & Core Web Vitals:** Optimized asset loading, sub-second TTFB, and verified 95+ Google Lighthouse scores across Performance, SEO, and Best Practices.
+- **SEO & AEO:** Structured data (Schema.org), semantic HTML tags, and search engine optimization engineered for AI answer engines and local organic reach.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Language** | TypeScript / Modern ES6+ JavaScript |
+| **Framework** | Next.js (React) |
+| **Styling** | Tailwind CSS / PostCSS |
+| **Component Library** | Shadcn UI |
+| **Hosting & Deployment** | Static HTML Export / Hostinger Static Hosting / Cloudflare DNS |
+
+---
+
+## 🚀 Getting Started
+
+First, clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone [https://github.com/joseph1mont/protaxpayers.git](https://github.com/joseph1mont/protaxpayers.git)
+cd protaxpayers
+npm install
